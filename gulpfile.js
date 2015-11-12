@@ -46,7 +46,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch-sass', function() {
-  return gulp.watch('./styles/*.scss', ['sass']);
+  return gulp.watch('./style/*.scss', ['sass']);
 });
 
 //start local dev svr
