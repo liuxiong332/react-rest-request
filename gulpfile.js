@@ -11,7 +11,7 @@ var gutil = require('gulp-util');
 
 function compile(watch) {
   var bundler = watchify(
-    browserify('./app/main.js', {debug: true})
+    browserify('./lib/main.js', {debug: true})
     .transform("babelify", {presets: ["es2015", "react"]})
   );
 
@@ -23,7 +23,7 @@ function compile(watch) {
       // optional, remove if you dont want sourcemaps
       .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
        // Add transformation tasks to the pipeline here.
-      .pipe(sourcemaps.write('./build')) // writes .map file
+      .pipe(sourcemaps.write('./')) // writes .map file
       .pipe(gulp.dest('./build/js/'));
   }
 
@@ -38,18 +38,20 @@ function compile(watch) {
 }
 
 gulp.task('sass', function () {
-  gulp.src('./styles/app.scss')
+  return gulp.src('./style/app.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./build/style'));
 });
 
 gulp.task('watch-sass', function() {
-  gulp.watch('./styles/*.scss', ['sass']);
+  return gulp.watch('./styles/*.scss', ['sass']);
 });
 
 //start local dev svr
 gulp.task('connect', function() {
-  connect.server({
+  return connect.server({
     root: ['./build'],
     livereload: true
   });
