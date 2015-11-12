@@ -1,0 +1,27 @@
+{
+  "name": "react-rest-request",
+  "version": "1.0.0",
+  "description": "The react component that can request the URL and see the response",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuxiong332/react-rest-request.git"
+  },
+  "keywords": [
+    "react",
+    "component"
+  ],
+  "author": "liuxiong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuxiong332/react-rest-request/issues"
+  },
+  "homepage": "https://github.com/liuxiong332/react-rest-request#readme",
+  "dependencies": {
+    "react": "^0.14.2",
+    "react-ace": "^2.6.0"
+  }
+}
