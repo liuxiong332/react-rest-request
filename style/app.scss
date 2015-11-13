@@ -4,3 +4,24 @@
   padding: 5px;
   display: inline-block;
 }
+
+.item-check {
+  border: 1px;
+  border-radius: 50%;
+  &.check-active {
+    background-color: #0FB;
+  }
+  &.check-deactive {
+    background-color: gray;
+  }
+}
+
+.icon-button {
+  display: inline-block;
+  width: 1.6em;
+  height: 1.6em;
+  line-height: 1.6em;
+  vertical-align: middle;
+  margin: 0.2em;
+  text-align: center;
+}
