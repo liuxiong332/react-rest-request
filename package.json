@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/liuxiong332/react-rest-request#readme",
   "dependencies": {
+    "classnames": "^2.2.0",
+    "immutable": "^3.7.5",
     "react": "^0.14.2",
     "react-ace": "^2.6.0",
     "react-bootstrap": "^0.27.3",
@@ -29,6 +31,7 @@
   "devDependencies": {
     "babel-preset-es2015": "^6.1.4",
     "babel-preset-react": "^6.1.4",
+    "babel-preset-stage-2": "^6.1.18",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
     "gulp": "^3.9.0",

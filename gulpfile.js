@@ -12,7 +12,7 @@ var gutil = require('gulp-util');
 function compile(watch) {
   var bundler = watchify(
     browserify('./lib/main.js', {debug: true})
-    .transform("babelify", {presets: ["es2015", "react"]})
+    .transform("babelify", {presets: ["es2015", "react", "stage-2"]})
   );
 
   function rebundle() {
