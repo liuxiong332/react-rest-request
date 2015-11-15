@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/liuxiong332/react-rest-request#readme",
   "dependencies": {
+    "ace": "0.0.2",
     "classnames": "^2.2.0",
     "immutable": "^3.7.5",
     "pure-render-mixin": "^1.0.2",
