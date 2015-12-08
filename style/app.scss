@@ -25,25 +25,36 @@
       background-color: gray;
     }
   }
-
-  &.move-bar {
-    cursor: move;
-  }
 }
 
 .editor-item {
-  .editor-item-content {
-    & > * {
-      float: left;
+  margin: 15px 0px;
+  display: inline-block;
+  width: 100%;
+
+  .inputs {
+    display: inline-block;
+    width: 80%;
+
+    &:hover  {
+      background-color: rgba(60%, 100%, 80%, 0.3);
+      & > input {
+        background-color: rgba(60%, 100%, 80%, 0.1);
+      }
+    }
+
+    input.form-control {
       width: 48%;
-      margin: 0 2%  0 0;
-    }
-    & input {
-      background-color: rgba(100%, 100%, 100%, 0.5);
-    }
-    &:hover {
-      background: #BFB;
+      display: inline;
+      margin-right: 2%;
     }
   }
 
+  .move-bar {
+    cursor: move;
+
+    &.invisibility {
+      visibility: hidden;
+    }
+  }
 }
